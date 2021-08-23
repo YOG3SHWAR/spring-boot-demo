@@ -28,6 +28,12 @@ public class Controller {
         return service.add(a, b);
     }
 
+    // Getting value from application.yaml
+    @GetMapping("/get")
+    public String add() {
+        return service.check();
+    }
+
     @PostMapping("/add")
     public String addUserToDb(@RequestBody User user) {
 

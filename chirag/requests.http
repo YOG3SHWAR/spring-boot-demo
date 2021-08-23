@@ -9,3 +9,7 @@ Content-Type: application/json
     "email": "chirag@gmail.com",
     "udhar": 30000.0
 }
+
+
+### Getting value from application.yaml
+http://localhost:8080/api/get

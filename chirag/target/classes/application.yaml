@@ -7,3 +7,12 @@ spring:
       database: demo
       port: 27017
       host: localhost
+
+vehicle:
+  attributes:
+    basicInformation:
+      - brand
+      - model
+    performance:
+      - topSpeed
+      - tripMeter

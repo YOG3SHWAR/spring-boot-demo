@@ -8,8 +8,6 @@ import com.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import lombok.extern.slf4j.Slf4j;
-
 @Service
 public class ServiceImpl implements DemoService {
 
@@ -25,6 +23,9 @@ public class ServiceImpl implements DemoService {
 
     @Autowired
     UserRepository repo;
+
+    @Autowired
+    ServerProperties props;
 
     User user = new User();
 
@@ -48,6 +49,12 @@ public class ServiceImpl implements DemoService {
 
         repo.save(user);
         return true;
+    }
+
+    @Override
+    public String check() {
+        // Getting value from application.yaml
+        return String.valueOf(props.getAttributes());
     }
 
 }
